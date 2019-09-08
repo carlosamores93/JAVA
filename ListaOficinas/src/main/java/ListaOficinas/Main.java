@@ -56,6 +56,17 @@ public class Main {
         System.out.println(rom1.toString());
         System.out.println(rom2.toString());
         System.out.println(rom3.toString());
+        
+        
+        Raton raton1 = new Raton("USB", "Dell");
+        Raton raton2 = new Raton("Inalambrico", "HP");
+        Raton raton3 = new Raton("Integrado", "Lenovo");
+        Raton raton4 = new Raton("Blutut", "Apple");
+        System.out.println(raton1.toString());
+        System.out.println(raton2.toString());
+        System.out.println(raton3.toString());
+        System.out.println(raton4.toString());
+
 
         
     }
