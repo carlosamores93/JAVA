@@ -66,8 +66,22 @@ public class Main {
         System.out.println(raton2.toString());
         System.out.println(raton3.toString());
         System.out.println(raton4.toString());
+        
+        Teclado teclado1 = new Teclado("USB", "Dell");
+        Teclado teclado2 = new Teclado("Inalambrico", "HP");
+        Teclado teclado3 = new Teclado("Integrado", "Lenovo");
+        Teclado teclado4 = new Teclado("Blutut", "Apple");
+        System.out.println(teclado1.toString());
+        System.out.println(teclado2.toString());
+        System.out.println(teclado3.toString());
+        System.out.println(teclado4.toString());
 
-
+        Computadora machine1 = new Computadora(amd, teclado1, raton4);
+        //System.out.println(machine1.toString());
+        Computadora machine2 = new Computadora(intel7, teclado2, raton1);
+        Rom roms[] = {new Rom("DELL", 256), new Rom("Toshiba", 512)};
+        machine2.setRoms(roms);
+        System.out.println(machine2.toString());
         
     }
     
