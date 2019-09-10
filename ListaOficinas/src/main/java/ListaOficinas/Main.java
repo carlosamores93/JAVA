@@ -53,9 +53,11 @@ public class Main {
         Rom rom1 = new Rom("DELL", 256);
         Rom rom2 = new Rom("Toshiba", 512);
         Rom rom3 = new Rom("Kingstioon SSD", 128);
+        Rom rom4 = new Rom("Kinn SSD", 256);
         System.out.println(rom1.toString());
         System.out.println(rom2.toString());
         System.out.println(rom3.toString());
+        System.out.println(rom4.toString());
         
         
         Raton raton1 = new Raton("USB", "Dell");
@@ -77,10 +79,29 @@ public class Main {
         System.out.println(teclado4.toString());
 
         Computadora machine1 = new Computadora(amd, teclado1, raton4);
-        //System.out.println(machine1.toString());
+        machine1.setMonitor(monitor1);
+        machine1.setMonitor(monitor2);
+        machine1.setMonitor(monitor3);
+        machine1.setMonitor(monitor4);
+        machine1.setRom(rom1);
+        machine1.setRom(rom2);
+        machine1.setRom(rom3);
+        machine1.setRom(rom4);
+        machine1.setRam(ram1);
+        machine1.setRam(ram2);
+        machine1.setRam(ram3);
+        machine1.setTeclado(teclado1);
+        machine1.setRaton(raton1);
+        System.out.println(machine1.toString());
         Computadora machine2 = new Computadora(intel7, teclado2, raton1);
         Rom roms[] = {new Rom("DELL", 256), new Rom("Toshiba", 512)};
+        Monitor monitoresArray[] = { new Monitor("Carlos", "USB", 24)};
         machine2.setRoms(roms);
+        machine2.setMonitores(monitoresArray);
+        Ram ramms[] = {new Ram("CArlos RAM", 500)};
+        machine2.setRams(ramms);
+        machine2.setTeclado(teclado4);
+        machine2.setRaton(raton4);
         System.out.println(machine2.toString());
         
     }
