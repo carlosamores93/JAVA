@@ -1,2 +1,2 @@
-# Java SE Repaso conceptos básicos
+# Java SE
 Repasando concetos básicos de java
