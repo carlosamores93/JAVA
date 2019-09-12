@@ -123,31 +123,21 @@ public class Computadora {
         String computadora = "Computadora " + this.id + ":";
         String cpu_info ="\n\t" + this.cpu.toString();
         String raton_info = "\n\t" + this.raton.toString();
-        String teclado_info = "\n\t" + this.teclado.toString();
-        String monitores_info = "\n\t";
+        String teclado_info = this.teclado.toString();
+        String monitores_info = "";
         for (Monitor monitore : this.monitores) {
-            monitores_info = monitores_info + monitore.toString();
+            monitores_info = monitores_info + monitore.toString() + "\n\t";
         }
-        String rom_info = "\n\t";
+        String rom_info = "";
         for (int i = 0; i < this.roms.length; i++) {
-            rom_info = rom_info + this.roms[i].toString();
+            rom_info = rom_info + this.roms[i].toString() + "\n\t";
         }
-        String ram_info = "\n\t";
+        String ram_info = "";
         for (Ram ramm : this.rams) {
-           ram_info =  ram_info + ramm.toString();
+           ram_info =  ram_info + ramm.toString() + "\n\t";
         }
         return computadora + cpu_info + monitores_info + rom_info + ram_info + teclado_info + raton_info;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
 }
