@@ -3,25 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package computers;
+package oficina.computers;
 
 /**
  *
  * @author carlos
  */
-public class Rom extends Almacenamiento{
+public class Ram extends Almacenamiento{
     
     private final int id;
     private static int contador;
     
-    public Rom( String marca, int cap){
+    public Ram( String marca, int cap){
         super(marca, cap);
         this.id = ++this.contador;
     }
     
     @Override
     public String toString(){
-        return "ROM " + super.toString() + " " +super.getCapacidad() + " GB } ";
+        return "RAM " + super.toString() + " " +super.getCapacidad() + " MB } ";
     }
     
 }

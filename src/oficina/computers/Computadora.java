@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package computers;
+package oficina.computers;
 
 /**
  *
@@ -120,11 +120,11 @@ public class Computadora {
 
     @Override
     public String toString() {
-        String computadora = "Computadora " + this.id + ":";
+        String computadora = "\nComputadora " + this.id + ":";
         String cpu_info ="\n\t" + this.cpu.toString();
         String raton_info = "\n\t" + this.raton.toString();
         String teclado_info = this.teclado.toString();
-        String monitores_info = "";
+        String monitores_info = "\n\t";
         for (Monitor monitore : this.monitores) {
             monitores_info = monitores_info + monitore.toString() + "\n\t";
         }

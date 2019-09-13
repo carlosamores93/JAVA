@@ -3,19 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package computers;
+package oficina.computers;
+
 
 /**
  *
  * @author carlos
  */
-public class DispositivosEntrada {
-    private String tipo;
-    private String marca;
+public class Almacenamiento {
     
-    public DispositivosEntrada(String t, String m){
-        this.tipo = t;
-        this.marca = m;
+    private String marca;
+    private int capacidad;
+    
+    public Almacenamiento(String marca, int cap){
+        this.marca = marca;
+        this.capacidad = cap;
     }
     
     public void setMarca(String brand){
@@ -26,16 +28,18 @@ public class DispositivosEntrada {
         return this.marca;
     }
     
-    public void setTipo(String cap){
-        this.marca = cap;
+    public void setCapacidad(int cap){
+        this.capacidad = cap;
     }
     
-    public String getTipo(){
-        return this.marca;
+    public int getCapacidad(){
+        return this.capacidad;
     }
     
     @Override
     public String toString(){
-        return "Dispositivo { " + this.marca + " " + this.tipo + " }";
+        return "Almacenamiento { " + this.marca ;
     }
+    
+    
 }
