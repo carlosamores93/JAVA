@@ -5,22 +5,33 @@
  */
 package main;
 import boxing.AutoboxingUnboxing;
+import enumerados.Paises;
 import oficina.Oficina;
 
 /**
- *
- * @author carlos
+ * <p>Clase principal
+ * <a href="http://carlosamores.hol.es" target="_blank">Carlo Amores Website</a>
+ * </p>
+ * @author Carlos Salvador Amores MArtinez
+ * @version 1.0
  */
 public class Main {
     
     /**
+     * <p>Método principal</p>
+     * @author Carlos Salvador Amores MArtínez
      * @param args the command line arguments
-     */
+     * @see <a href="http://carlosamores.hol.es">Mi sitio web</a>
+     * @since 1.0
+    */
     public static void main(String[] args) {
         
         AutoboxingUnboxing.autoboxingUnboxing();
-        //repasoConceptosGeneralesDeLaPoo();
-        //probandoCosillas();
+        repasoConceptosGeneralesDeLaPoo();
+        probandoCosillas();
+        pasoDeArgumentosVariables(1,2,3,4);
+        pasoDeArgumentosVariables(1,2,3,4,5,6,7);
+        tiposEnumerados();
      
     }
     
@@ -28,7 +39,6 @@ public class Main {
         Oficina ofi = new Oficina();
         System.out.println(ofi.toString());
     }
-    
     
     public static void probandoCosillas(){
         /*
@@ -93,5 +103,29 @@ public class Main {
         * Constante
         * */
        final int puerto_bbdd = 21;
+    }
+    
+    public static void pasoDeArgumentosVariables(int... numeros){ 
+        for (int num : numeros) {
+            System.out.print( num + " ");
+        }
+        System.out.println();
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.print(numeros[i] + " ");
+        }
+        System.out.println();
+    }
+    
+    /**
+     * <p> Tipos enumeraods en Java</p>
+     * @author Carlos Salvador Amores MArtínez
+     * @location Madrid
+    */
+    public static void tiposEnumerados(){ 
+        System.out.println("Pais: " + Paises.ARGENTINA);
+        System.out.println("Pais: " + Paises.ECUADOR.getCode());
+        for (Paises p : Paises.values()) {
+            System.out.println("Pais: " + p + ", code: " + p.getCode() + " , " + p.name());
+        }
     }
 }

@@ -28,9 +28,12 @@ public class Almacenamiento {
         return this.marca;
     }
     
+
     public void setCapacidad(int cap){
         this.capacidad = cap;
     }
+    
+
     
     public int getCapacidad(){
         return this.capacidad;
