@@ -6,7 +6,12 @@
 package main;
 import boxing.AutoboxingUnboxing;
 import enumerados.Paises;
+import instancia.Circulo;
+import instancia.Elipse;
+import instancia.FiguraGeometrica;
 import oficina.Oficina;
+import polimorfismo.Empleado;
+import polimorfismo.Gerente;
 
 /**
  * <p>Clase principal
@@ -26,6 +31,8 @@ public class Main {
     */
     public static void main(String[] args) {
         
+        conceptoDePolimorfismo();
+        instanceOfOperator();
         AutoboxingUnboxing.autoboxingUnboxing();
         repasoConceptosGeneralesDeLaPoo();
         probandoCosillas();
@@ -33,6 +40,42 @@ public class Main {
         pasoDeArgumentosVariables(1,2,3,4,5,6,7);
         tiposEnumerados();
      
+    }
+    
+    /**
+     * <p> Polomorfismo: ejecucion de métodos iguales en tiempos distintos.
+     * Se ejecutan en clases heredadas de una clase padre.
+     * </p>
+     * @author Carlos Amores
+     * @versio 1.0
+     */
+    public static void conceptoDePolimorfismo(){
+        Empleado em = new Empleado("Carlos Empleado", 1200);
+        System.out.println(em.toString());
+        em = new Gerente("Carlos Gerente", 2500, "Comercial");
+        System.out.println(em.toString());
+    }
+    
+    /**
+     * <p> Repasando concepto del operador <strong> intanceof </strong></p>
+     * @author Carlos Amores
+     * @version 1.0
+     */
+    public static void instanceOfOperator(){
+        
+        FiguraGeometrica figura = new Elipse();
+        if (figura instanceof Object) {
+            System.out.println("Es de tipo Object");
+        }
+        if (figura instanceof FiguraGeometrica) {
+            System.out.println("Es de tipo Figura geometrica");
+        }
+        if (figura instanceof Circulo) {
+            System.out.println("Es de tipo Circulo");
+        }
+        if (figura instanceof Elipse) {
+            System.out.println("Es de tipo Elipse");
+        }
     }
     
     public static void repasoConceptosGeneralesDeLaPoo(){
