@@ -11,7 +11,9 @@ import instancia.Elipse;
 import instancia.FiguraGeometrica;
 import oficina.Oficina;
 import polimorfismo.Empleado;
+import polimorfismo.Escritor;
 import polimorfismo.Gerente;
+import polimorfismo.TipoEscritura;
 
 /**
  * <p>Clase principal
@@ -31,14 +33,15 @@ public class Main {
     */
     public static void main(String[] args) {
         
-        conceptoDePolimorfismo();
+        conversionDeObjetos();
+        /*conceptoDePolimorfismo();
         instanceOfOperator();
         AutoboxingUnboxing.autoboxingUnboxing();
         repasoConceptosGeneralesDeLaPoo();
         probandoCosillas();
         pasoDeArgumentosVariables(1,2,3,4);
         pasoDeArgumentosVariables(1,2,3,4,5,6,7);
-        tiposEnumerados();
+        tiposEnumerados();*/
      
     }
     
@@ -54,6 +57,40 @@ public class Main {
         System.out.println(em.toString());
         em = new Gerente("Carlos Gerente", 2500, "Comercial");
         System.out.println(em.toString());
+    }
+    
+    /**
+     * <p> Conversión de objetos:
+     * <b> Upcasting:</b> de menos a menos
+     * <b> Downcasting:</b> de mas a menos
+     * </p>
+     * @author Carlos Amores
+     * @versio 1.0
+     */
+    public static void conversionDeObjetos(){
+        Empleado em;
+        
+        // Asignamos una referencia a un objeto de menor jerarquia (UPCASTING)
+        // No hay necesidad de notación especial. Conversion hacias arriba, de menos a mas
+        em = new Escritor("Carlos Empleado", 1200, TipoEscritura.CLASICO);
+        
+        // Esta caracterisitca no es comun para todas las clases y fallaria la ejecución
+        //em.getTipoEscrituraenTexto();
+        
+        System.out.println(em.toString());
+        
+        if (em instanceof Escritor) {
+            // Convertimos un objeto a de mayor a jerarquia a menor jerarquia
+            // Downcasting: de mas a menos
+            Escritor escritor = (Escritor)em;
+            
+            String cadena = escritor.getTipoEscrituraEnTexto();
+            System.out.println(cadena);
+           
+            System.out.println(((Escritor)em).getTipoEscrituraEnTexto());
+        }
+        
+        
     }
     
     /**
