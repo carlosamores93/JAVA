@@ -33,8 +33,9 @@ public class Main {
     */
     public static void main(String[] args) {
         
-        conversionDeObjetos();
-        /*conceptoDePolimorfismo();
+        comparacionDeObjectos();
+        /*conversionDeObjetos();
+        conceptoDePolimorfismo();
         instanceOfOperator();
         AutoboxingUnboxing.autoboxingUnboxing();
         repasoConceptosGeneralesDeLaPoo();
@@ -43,6 +44,31 @@ public class Main {
         pasoDeArgumentosVariables(1,2,3,4,5,6,7);
         tiposEnumerados();*/
      
+    }
+    
+    /**
+     * <p> Sobreescibimos metodos hashCode y equals de la clase objeto </p>
+     * @author Carlos Amores
+     * @versio 1.0
+     */
+    public static void comparacionDeObjectos(){
+        Empleado em1 = new Empleado("Carlos Empleado", 1200);
+        Empleado em2 = new Empleado("Carlos Empleado", 1200);
+        if (em1 == em2) {
+            System.out.println("Los objetos tienen misma dirección de memoria");
+        }else{
+            System.out.println("Los objetos NO tiene misma dirección de memoria");
+        }
+        if (em1.equals(em2)) {
+            System.out.println("Los objetos tienen mismo contenido SON IGUALES");
+        }else{
+            System.out.println("Los objetos NO SON iguales, no tienen mismo contenido");
+        }
+        if (em1.hashCode() == em2.hashCode()) {
+            System.out.println("Los objetos tienen mismo código hash");
+        }else{
+            System.out.println("Los objetos NO tienen el mismo código hash");
+        }
     }
     
     /**
