@@ -10,5 +10,12 @@ package instancia;
  * @author carlos
  */
 public class Elipse extends Circulo{
+
+    public Elipse() {
+    }
+    
+    public Elipse(String tipoFigura) {
+        super(tipoFigura);
+    }
     
 }

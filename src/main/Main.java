@@ -7,8 +7,10 @@ package main;
 import boxing.AutoboxingUnboxing;
 import enumerados.Paises;
 import instancia.Circulo;
+import instancia.Cuadrado;
 import instancia.Elipse;
 import instancia.FiguraGeometrica;
+import instancia.Triangulo;
 import oficina.Oficina;
 import polimorfismo.Empleado;
 import polimorfismo.Escritor;
@@ -33,8 +35,9 @@ public class Main {
     */
     public static void main(String[] args) {
         
-        comparacionDeObjectos();
-        /*conversionDeObjetos();
+        ejemploDeClasesAbstractas();
+        /*comparacionDeObjectos();
+        conversionDeObjetos();
         conceptoDePolimorfismo();
         instanceOfOperator();
         AutoboxingUnboxing.autoboxingUnboxing();
@@ -44,6 +47,37 @@ public class Main {
         pasoDeArgumentosVariables(1,2,3,4,5,6,7);
         tiposEnumerados();*/
      
+    }
+    
+    /**
+     * <p> Ejemplo para el manejo de clases abstractas </p>
+     * @author Carlos Amores
+     * @versio 1.0
+     */
+    public static void ejemploDeClasesAbstractas(){
+        
+        // Creamos objetos
+        FiguraGeometrica triangulo = new Triangulo("triangulo");
+        FiguraGeometrica cuadrado = new Cuadrado("cuadrado");
+        FiguraGeometrica circulo = new Circulo("circulo");
+        FiguraGeometrica elipse = new Elipse("elipse");
+        
+        System.out.println(triangulo);
+        triangulo.dibujar();
+        System.out.println("");
+        
+        System.out.println(cuadrado);
+        cuadrado.dibujar();
+        System.out.println("");
+        
+        System.out.println(circulo);
+        circulo.dibujar();
+        System.out.println("");
+        
+        System.out.println(elipse);
+        elipse.dibujar();
+        System.out.println("");
+        
     }
     
     /**

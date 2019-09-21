@@ -10,5 +10,18 @@ package instancia;
  * @author carlos
  */
 public class Circulo extends FiguraGeometrica{
+
+    public Circulo() {
+    }
+
+    public Circulo(String tipoFigura) {
+        super(tipoFigura);
+    }
+
+    @Override
+    public void dibujar() {
+         System.out.println("Aqui deberiamos dibujar un " + this.getClass().getSimpleName());
+    }
+    
     
 }

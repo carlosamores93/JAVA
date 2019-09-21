@@ -10,5 +10,19 @@ package instancia;
  * @author carlos
  */
 public class Triangulo  extends FiguraGeometrica{
+
+    public Triangulo() {
+    }
+
+    public Triangulo(String tipoFigura) {
+        super(tipoFigura);
+    }
+
+    @Override
+    public void dibujar() {
+        System.out.println("Aqui deberiamos dibujar un " + this.getClass().getSimpleName());
+    }
+    
+    
     
 }
