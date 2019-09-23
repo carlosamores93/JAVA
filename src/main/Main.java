@@ -11,6 +11,9 @@ import instancia.Cuadrado;
 import instancia.Elipse;
 import instancia.FiguraGeometrica;
 import instancia.Triangulo;
+import interfaces.AccesoDatos;
+import interfaces.ImplementacionMysql;
+import interfaces.ImplementacionOracle;
 import oficina.Oficina;
 import polimorfismo.Empleado;
 import polimorfismo.Escritor;
@@ -35,8 +38,9 @@ public class Main {
     */
     public static void main(String[] args) {
         
-        ejemploDeClasesAbstractas();
-        /*comparacionDeObjectos();
+        manejoDeInterfaces();
+        /*ejemploDeClasesAbstractas();
+        comparacionDeObjectos();
         conversionDeObjetos();
         conceptoDePolimorfismo();
         instanceOfOperator();
@@ -47,6 +51,27 @@ public class Main {
         pasoDeArgumentosVariables(1,2,3,4,5,6,7);
         tiposEnumerados();*/
      
+    }
+    
+    /**
+     * <p> Interfaz: es una lista de acciones que puede llevar a cabo un determinado objeto
+     * Una clase puede implementar varias interfaces
+     * Clases Abstractas vs Interfaces
+     * CA: encapsula funcionalidad comun, objetos realcionados
+     * Interfaz:  define comportamiento relacionado que puede pertenece a cualquioer clase o estructura, objetos no realcionados
+     * </p>
+     * @author Carlos Amores
+     * @versio 1.0
+     */
+    public static void manejoDeInterfaces(){
+        
+        AccesoDatos datos = new ImplementacionMysql();
+        datos.listar();
+        datos.insertar();
+        
+        datos = new ImplementacionOracle();
+        datos.listar();
+        datos.insertar();
     }
     
     /**
