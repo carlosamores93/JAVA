@@ -14,6 +14,7 @@ import instancia.Triangulo;
 import interfaces.AccesoDatos;
 import interfaces.ImplementacionMysql;
 import interfaces.ImplementacionOracle;
+import javabeans.PersonaBean;
 import oficina.Oficina;
 import polimorfismo.Empleado;
 import polimorfismo.Escritor;
@@ -38,8 +39,10 @@ public class Main {
     */
     public static void main(String[] args) {
         
+        manejoDeJavaBeans();
+        /*
         manejoDeInterfaces();
-        /*ejemploDeClasesAbstractas();
+        ejemploDeClasesAbstractas();
         comparacionDeObjectos();
         conversionDeObjetos();
         conceptoDePolimorfismo();
@@ -49,8 +52,31 @@ public class Main {
         probandoCosillas();
         pasoDeArgumentosVariables(1,2,3,4);
         pasoDeArgumentosVariables(1,2,3,4,5,6,7);
-        tiposEnumerados();*/
+        tiposEnumerados();
+        */
      
+    }
+    
+    /**
+     * <p> Javabeans: es una clase puera de java, ciertas minima para lalamrse javabeans. 
+     * Usada por otras clase sin conocer el contenido de esta clase(PersonaBean), debe cumplir:
+     * 1. Debe tener un constructor vacio obligatoriamente
+     * 2. Los atributos deben ser privados
+     * 3. Métodos set__() and get__(), para booleans is__()
+     * 4. Implementará la interfaz Serializable del paquete java.io (No tiene métodos)
+     * </p>
+     * @author Carlos Amores
+     * @versio 1.0
+     */
+    public static void manejoDeJavaBeans(){
+        PersonaBean bean = new PersonaBean();
+        bean.setEdad(26);
+        bean.setNombre("Carlos Amores");
+        System.out.println("Nombre: " + bean.getNombre() + ", edad: " + bean.getEdad());
+        
+        bean = new PersonaBean("Camila Amores", 3);
+        System.out.println("Nombre: " + bean.getNombre() + ", edad: " + bean.getEdad());
+               
     }
     
     /**
