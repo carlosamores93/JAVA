@@ -1,2 +1,2 @@
-# Java SE
-Repasando concetos básicos de java
+# Java
+Java, POO, JDBC, Servlets, JavaEE, Web Services, JSF, EJB, JPA, PrimeFaces, Hibernate, Spring, Struts!
